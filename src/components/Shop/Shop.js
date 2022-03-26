@@ -15,6 +15,7 @@ const Shop = () => {
     }, []);
 
     const handleAddToCart = (product) =>{
+        console.log(product)
         const newCart = [...cart, product];
         setCart(newCart);
     }
@@ -31,7 +32,13 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <h3>Selected Items</h3>
+                <h3 className='cart'>Selected Items</h3>
+                <div>
+                    {
+                        cart.map(product => <h4 key={product.id}
+                        ><img width= "20px" src={product.img} alt="" />   {product.name}</h4> )
+                    }
+                </div>
                 <button className='cart-btn'>Choose 1 for me</button>
                 <button className='cart-btn2'>Choose Again</button>
             </div>
