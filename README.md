@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Laptop Store BD
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[private Repo link](https://github.com/Programming-Hero-Web-Course4/lucky-one-Mehadi-Hasan98).
 
-## Available Scripts
+## Live Site Link:
 
-In the project directory, you can run:
+(https://laptop-store-bd1.netlify.app/)
 
 ### `npm start`
 
