@@ -1,11 +1,12 @@
+import { faArrowsSpin, faDeleteLeft, faRemove } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
 import './Shop.css'
 
 const Shop = () => {
-    // const handleAddToCart = props;
     const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState([]);
    
 
     useEffect(()=> {
@@ -15,9 +16,22 @@ const Shop = () => {
     }, []);
 
     const handleAddToCart = (product) =>{
-        console.log(product)
         const newCart = [...cart, product];
         setCart(newCart);
+    }
+    const chooseOne = () =>{
+        if(cart.length === 0){
+            alert("You didn't added any items")
+        }
+        else{
+            const randomItem = cart[Math.floor(Math.random() * cart.length)];
+            const randomArr = [randomItem];
+            setCart(randomArr);
+        }
+    };
+    const reset = () => {
+        const reset = [];
+        setCart(reset);
     }
 
     return (
@@ -39,8 +53,8 @@ const Shop = () => {
                         ><img width= "20px" src={product.img} alt="" />   {product.name}</h4> )
                     }
                 </div>
-                <button className='cart-btn'>Choose 1 for me</button>
-                <button className='cart-btn2'>Choose Again</button>
+                <button onClick={chooseOne} className='cart-btn'>Choose 1 for me <FontAwesomeIcon icon={faArrowsSpin}></FontAwesomeIcon></button>
+                <button onClick={reset} className='cart-btn2'>Choose Again <FontAwesomeIcon icon={faRemove}></FontAwesomeIcon></button>
             </div>
         </div>
     );

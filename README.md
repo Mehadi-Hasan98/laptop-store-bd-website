@@ -1,6 +1,6 @@
 # Laptop Store BD
 
-[private Repo link](https://github.com/Programming-Hero-Web-Course4/lucky-one-Mehadi-Hasan98).
+
 
 ## Live Site Link:
 
