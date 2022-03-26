@@ -5,6 +5,7 @@ import './Shop.css'
 const Shop = () => {
     // const handleAddToCart = props;
     const [products, setProducts] = useState([]);
+    const [cart, setCart] = useState([])
    
 
     useEffect(()=> {
@@ -15,6 +16,8 @@ const Shop = () => {
 
     const handleAddToCart = (product) =>{
         console.log(product)
+        const newCart = [...cart, product];
+        setCart(newCart);
     }
 
     return (
@@ -29,7 +32,7 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <h3>Selected Items</h3>
+                <h3>Selected Items: {cart.length}</h3>
             </div>
         </div>
     );

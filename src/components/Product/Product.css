@@ -27,7 +27,14 @@
     background: aquamarine;
     border: none;
     border-radius: 0px 0px 8px 8px;
-    margin-top: 12px;
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cart .btn-text{
+    margin-right: 5px;
 }
 
 .btn-cart:hover{
